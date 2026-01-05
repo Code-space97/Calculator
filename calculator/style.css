@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c3e50;
+}
+
+#calculator {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+}
+
+#display {
+  width: 100%;
+  height: 60px;
+  margin-bottom: 15px;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: #000;
+  color: #0f0;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.button {
+  height: 55px;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #333;
+  color: #fff;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.button:hover {
+  background: #555;
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Clear button */
+.button:nth-child(1) {
+  background: #e74c3c;
+}
+
+.button:nth-child(1):hover {
+  background: #c0392b;
+}
+
+/* Operator buttons */
+.button:nth-child(4),
+.button:nth-child(7),
+.button:nth-child(10),
+.button:nth-child(13) {
+  background: #f39c12;
+}
+
+.button:nth-child(4):hover,
+.button:nth-child(7):hover,
+.button:nth-child(10):hover,
+.button:nth-child(13):hover {
+  background: #e67e22;
+}
+
+/* Equal button */
+.button:nth-child(14) {
+  background: #27ae60;
+}
+
+.button:nth-child(14):hover {
+  background: #1e8449;
+}
